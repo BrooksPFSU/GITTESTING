@@ -1,0 +1,19 @@
+import random
+
+def coinFlip():
+	print("Flipping coin . . . ")
+
+	flip = random.randint(1, 2)
+
+	if flip==1:
+		print("Heads!")
+	elif flip==2:
+		print("Tails!")
+	else:
+		print("An error has occured.")
+
+def main():
+	coinFlip()
+
+if __name__ == '__main__':
+	main()

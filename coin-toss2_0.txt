@@ -1,0 +1,27 @@
+import random
+
+def coinFlip():
+	print("Flipping coin . . . ")
+
+	flip = random.randint(1, 2)
+
+	if flip==1:
+		print("Heads!")
+	elif flip==2:
+		print("Tails!")
+	else:
+		print("An error has occured.")
+
+def reps(num):
+	i = 0
+
+	while (i<num):
+		coinFlip()
+		i = i + 1
+
+def main():
+	num = int(input("How many times would you like to flip a coin? :"))
+	reps(num)
+
+if __name__ == '__main__':
+	main()

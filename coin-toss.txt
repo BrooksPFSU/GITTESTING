@@ -33,7 +33,12 @@ def stats():
 
 	print(f"Your flips were {headsPercent:.2f}% heads and {tailsPercent:.2f}% tails.")
 
+def coinChoice():
+	coin = input("Please choose a coin to flip. 'PENNY', 'NICKLE', 'DIME', 'QUARTER'")
+	print(f"You chose a {coin}! Happy flipping!")
+
 def main():
+	coinChoice()
 	coinFlip()
 	stats()
 

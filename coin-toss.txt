@@ -1,19 +1,41 @@
 import random
 
+heads = []
+tails = []
+
 def coinFlip():
-	print("Flipping coin . . . ")
+	while True:
+		resp = input("Please type FLIP to flip a coin. Type X when done.")
+		if (resp=='FLIP'):
+			print("Flipping coin . . . ")
 
-	flip = random.randint(1, 2)
+			flip = random.randint(1, 2)
 
-	if flip==1:
-		print("Heads!")
-	elif flip==2:
-		print("Tails!")
-	else:
-		print("An error has occured.")
+			if flip==1:
+				print("Heads!")
+				heads.append(1)
+			elif flip==2:
+				print("Tails!")
+				tails.append(1)
+			else:
+				print("An error has occured.")
+		elif (resp=='X'):
+			break
+		else:
+			print("Please try again.")
+
+def stats():
+	print("Stats: ")
+	print(f"You got heads {sum(heads)} times. You got tails {sum(tails)} times.")
+
+	headsPercent = (sum(heads) / (sum(heads) + sum(tails))) * 100
+	tailsPercent = (sum(tails) / (sum(heads) + sum(tails))) * 100
+
+	print(f"Your flips were {headsPercent:.2f}% heads and {tailsPercent:.2f}% tails.")
 
 def main():
 	coinFlip()
+	stats()
 
 if __name__ == '__main__':
 	main()

@@ -47,6 +47,19 @@ def gameChoice():
 	elif (choice=='ball'):
 		ballRoll()
 
+def ballRoll():
+	wish = input("What would you like to ask the magic 8 ball?")
+
+	rand = random.randint(1, 3)
+
+	if rand==1:
+		print("Yes, absolutely.")
+	elif rand==2:
+		print("Maybe next time...")
+		tails.append(1)
+	else:
+		print("No, definetly not.")
+
 def main():
 	gameChoice()
 

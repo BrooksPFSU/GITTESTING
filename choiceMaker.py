@@ -5,7 +5,7 @@ tails = []
 
 def coinFlip():
 	while True:
-		resp = input("Please type FLIP to flip a coin. Type X when done.")
+		resp = input("Please enter FLIP to flip a coin. Enter X when done.")
 		if (resp=='FLIP'):
 			print("Flipping coin . . . ")
 
@@ -37,8 +37,22 @@ def coinChoice():
 	coin = input("Please choose a coin to flip. 'PENNY', 'NICKLE', 'DIME', 'QUARTER'")
 	print(f"You chose a {coin}! Happy flipping!")
 
+def fortune():
+	print("Fortune loading...")
+
+	fortunes = ["Great opportunities are coming your way!", 
+		"Avoid the color red for the next 5 days.",
+		"You have already met your soulmate!",
+		"Your family has been missing you.", 
+		"New job opportunities are coming your way!", 
+		"Make sure you lock your doors."]
+
+	flip = random.randint(0, 5)
+
+	print(fortunes[flip])
+
 def gameChoice():
-	choice = input("Would you like to flip a 'coin' or roll an 8 'ball': ")
+	choice = input("Would you like to flip a 'coin' or roll an 8 'ball' or be told your 'fortune'': ")
 
 	if (choice=='coin'):
 		coinChoice()
@@ -46,6 +60,8 @@ def gameChoice():
 		stats()
 	elif (choice=='ball'):
 		ballRoll()
+	elif (choice=='fortune'):
+		fortune()
 
 def ballRoll():
 	wish = input("What would you like to ask the magic 8 ball?")

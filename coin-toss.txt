@@ -26,7 +26,7 @@ def coinFlip():
 
 def stats():
 	print("Stats: ")
-	print(f"You got heads {sum(heads)} times. You got tails {sum(tails)} times.")
+	print(f"You sure got heads {sum(heads)} times. You got tails {sum(tails)} times.")
 
 	headsPercent = (sum(heads) / (sum(heads) + sum(tails))) * 100
 	tailsPercent = (sum(tails) / (sum(heads) + sum(tails))) * 100

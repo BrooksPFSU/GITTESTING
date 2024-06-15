@@ -5,7 +5,7 @@ tails = []
 
 def coinFlip():
 	while True:
-		resp = input("Please type FLIP to flip a coin. Type X when done.")
+		resp = input("Please enter FLIP to flip a coin. Enter X when done.")
 		if (resp=='FLIP'):
 			print("Flipping coin . . . ")
 
